@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>AI Dub Sync</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #101827;
+    color: white;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    padding: 25px;
+}
+
+.logo {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #b8c2d1;
+}
+
+.card {
+    background: #1d2939;
+    padding: 22px;
+    border-radius: 18px;
+    margin-top: 25px;
+}
+
+label {
+    display: block;
+    margin-top: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input,
+select,
+button {
+
+    width: 100%;
+    padding: 14px;
+
+    border-radius: 10px;
+
+    border: none;
+
+    font-size: 16px;
+
+    box-sizing: border-box;
+}
+
+input,
+select {
+    background: #344054;
+    color: white;
+}
+
+button {
+
+    margin-top: 25px;
+
+    background: #7f56d9;
+
+    color: white;
+
+    font-weight: bold;
+
+}
+
+#status {
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #9fe8c1;
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="logo">
+
+🎬 AI DUB SYNC
+
+</div>
+
+
+<p class="subtitle">
+
+Translate • Dub • Lip Sync
+
+</p>
+
+
+<div class="card">
+
+
+<label>
+
+Upload Video
+
+</label>
+
+
+<input
+
+type="file"
+
+id="video"
+
+accept="video/*"
+
+
+>
+
+
+<label>
+
+Original Language
+
+</label>
+
+
+<select id="source">
+
+
+<option value="auto">
+
+Auto Detect
+
+</option>
+
+
+<option value="en">
+
+English
+
+</option>
+
+
+<option value="hi">
+
+Hindi
+
+</option>
+
+
+<option value="or">
+
+Odia
+
+</option>
+
+
+<option value="bn">
+
+Bengali
+
+</option>
+
+
+<option value="ta">
+
+Tamil
+
+</option>
+
+
+<option value="te">
+
+Telugu
+
+</option>
+
+
+<option value="ml">
+
+Malayalam
+
+</option>
+
+
+</select>
+
+
+<label>
+
+Dub Into
+
+</label>
+
+
+<select id="target">
+
+
+<option value="hi">
+
+Hindi
+
+</option>
+
+
+<option value="en">
+
+English
+
+</option>
+
+
+<option value="or">
+
+Odia
+
+</option>
+
+
+<option value="bn">
+
+Bengali
+
+</option>
+
+
+<option value="ta">
+
+Tamil
+
+</option>
+
+
+<option value="te">
+
+Telugu
+
+</option>
+
+
+<option value="ml">
+
+Malayalam
+
+</option>
+
+
+</select>
+
+
+<button onclick="startDubbing()">
+
+🚀 START AI DUBBING
+
+</button>
+
+
+<p id="status"></p>
+
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+function startDubbing() {
+
+
+const video =
+
+document.getElementById("video").files[0];
+
+
+const target =
+
+document.getElementById("target").value;
+
+
+if (!video) {
+
+document.getElementById("status").innerText =
+
+"❌ Please select a video first.";
+
+return;
+
+}
+
+
+document.getElementById("status").innerText =
+
+"✅ Video selected. AI processing will be connected next.";
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
